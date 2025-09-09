@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 
 HISTSIZE=10000
 SAVEHIST=10000
