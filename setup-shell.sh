@@ -10,6 +10,8 @@ MYZSH=${0:a:h}
 
 autoload -U colors && colors
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 setopt autocd
 setopt autopushd
