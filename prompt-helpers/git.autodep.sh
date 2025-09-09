@@ -24,9 +24,9 @@ _myzsh_git_prompt() {
   # Changes (staged + unstaged + untracked)
   changes=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')
   if [ "$ahead" -eq 0 ] && [ "$behind" -eq 0 ] && [ "$changes" -eq 0 ]; then
-    color="%F{1}"
-  else
     color="%F{2}"
+  else
+    color="%F{1}"
   fi
 
   # Output format: branch↓behind↑ahead ✚changes
