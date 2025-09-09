@@ -1,8 +1,5 @@
 #!/usr/bin/env zsh
 
-autoload -Uz compinit && compinit -C
-autoload -U +X bashcompinit && bashcompinit
-
 # Enable quick reverse search 
 # https://unix.stackexchange.com/a/672892
 autoload -U up-line-or-beginning-search

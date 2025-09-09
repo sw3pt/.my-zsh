@@ -9,6 +9,8 @@
 MYZSH=${0:a:h}
 
 autoload -U colors && colors
+autoload -Uz compinit && compinit -C
+autoload -U +X bashcompinit && bashcompinit
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
