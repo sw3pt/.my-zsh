@@ -13,9 +13,6 @@ autoload -Uz compinit && compinit -C
 autoload -U +X bashcompinit && bashcompinit
 autoload -U select-word-style && select-word-style bash
 
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
-
 setopt autocd
 setopt autopushd
 setopt combiningchars
@@ -34,5 +31,6 @@ source "$MYZSH"/completion.sh
 source "$MYZSH"/history.sh
 source "$MYZSH"/prompt.sh
 source "$MYZSH"/functions.sh
+source "$MYZSH"/keybinds.sh
 
 source <("$MYZSH"/plugin/kcm/kcm setup terminal)
