@@ -28,6 +28,7 @@ _myzsh_dynamic_prompt() {
       fi
 
       APPEND_PROMPT+=" [$EXPORT_PROMPT%{$reset_color%}]"
+      unset EXPORT_PROMPT
     fi
   done
   echo "$APPEND_PROMPT"
