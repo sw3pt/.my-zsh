@@ -53,8 +53,8 @@ for file in "$MYZSH"/completions/*.autodep.sh; do
 
   cmd_name=$(basename "$file" .autodep.sh)
 
-  # Check if the command exists using whence -p
-  cmd_path=$(whence -p "$cmd_name")
+  # Check if the command exists using whence
+  cmd_path=$(whence "$cmd_name")
 
   # Construct the "disable" variable dynamically
   disable_var="DISABLE_${cmd_name:u}"  # uppercase helper name
@@ -71,17 +71,17 @@ if [[ "$OSTYPE" = darwin* ]]; then
   if docker desktop version >/dev/null 2>&1; then
     fpath=(~/.docker/completions $fpath)
   fi
-  if whence -p brew >/dev/null 2>&1; then
+  if whence brew >/dev/null 2>&1; then
     fpath=(/opt/homebrew/completions/zsh $fpath)
   fi
 fi
 
 # Setup Kubectl autocomplete
-if whence -p kubectl >/dev/null 2>&1; then
+if whence kubectl >/dev/null 2>&1; then
   source <(kubectl completion zsh)
 fi
 # Setup oc autocomplete
-if whence -p oc >/dev/null 2>&1; then
+if whence oc >/dev/null 2>&1; then
   source <(oc completion zsh)
 fi
 # Setup kcm autocomplete

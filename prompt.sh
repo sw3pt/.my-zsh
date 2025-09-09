@@ -12,8 +12,8 @@ _myzsh_dynamic_prompt() {
 
     cmd_name=$(basename "$file" .autodep.sh)
 
-    # Check if the command exists using whence -p
-    cmd_path=$(whence -p "$cmd_name")
+    # Check if the command exists using whence
+    cmd_path=$(whence "$cmd_name")
 
     # Construct the "disable" variable dynamically
     disable_var="DISABLE_${cmd_name:u}"  # uppercase helper name
