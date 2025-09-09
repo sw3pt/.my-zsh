@@ -1,0 +1,3 @@
+[submodule "plugin/kcm"]
+	path = plugin/kcm
+	url = https://github.com/sw3pt/kcm.git
