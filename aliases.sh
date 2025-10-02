@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-alias kcm="$MYZSH"/plugin/kcm/kcm
+if [[ -e "$MYZSH"/plugin/kcm/kcm ]]; then
+  alias kcm="$MYZSH"/plugin/kcm/kcm
+fi
 
 for file in "$MYZSH"/aliases/*.autodep.sh; do
   # Skip if no files match

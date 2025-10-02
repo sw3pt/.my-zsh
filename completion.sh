@@ -85,7 +85,7 @@ if whence oc >/dev/null 2>&1; then
   source <(oc completion zsh)
 fi
 # Setup kcm autocomplete
-if which kcm >/dev/null 2>&1; then
+if whence kcm >/dev/null 2>&1; then
   source <(kcm completion zsh)
 fi
 
