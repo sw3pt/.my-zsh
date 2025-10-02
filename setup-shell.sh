@@ -32,5 +32,6 @@ source "$MYZSH"/history.sh
 source "$MYZSH"/prompt.sh
 source "$MYZSH"/functions.sh
 source "$MYZSH"/keybinds.sh
+source "$MYZSH"/variables.sh
 
 source <("$MYZSH"/plugin/kcm/kcm setup terminal)
