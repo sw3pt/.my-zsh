@@ -15,15 +15,6 @@ alias kaf='kubectl apply -f'
 # Drop into an interactive terminal on a container
 alias keti='kubectl exec -t -i'
 
-# Manage configuration quickly to switch contexts between local, dev ad staging.
-alias kcuc='kubectl config use-context'
-alias kcsc='kubectl config set-context'
-alias kcdc='kubectl config delete-context'
-alias kccc='kubectl config current-context'
-
-# List all contexts
-alias kcgc='kubectl config get-contexts'
-
 # General aliases
 alias kdel='kubectl delete'
 alias kdelf='kubectl delete -f'
