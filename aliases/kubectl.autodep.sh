@@ -177,3 +177,7 @@ alias yx="yq 'del( \
   .metadata.uid, .spec.volumes[] | select(.name == \"kube-api-access*\"), \
   .spec.containers[] | .volumeMounts[] | select(.name == \"kube-api-access*\")) \
   '"
+
+kvent() {
+  kubectl get event --sort-by .metadata.creationTimestamp | grep "$1"
+}
