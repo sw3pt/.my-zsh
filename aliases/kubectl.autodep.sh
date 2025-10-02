@@ -168,3 +168,12 @@ alias kgj='kubectl get job'
 alias kej='kubectl edit job'
 alias kdj='kubectl describe job'
 alias kdelj='kubectl delete job'
+
+alias yx="yq 'del( \
+  .status, \
+  .metadata.generateName, \
+  .metadata.ownerReferences, \
+  .metadata.resourceVersion, \
+  .metadata.uid, .spec.volumes[] | select(.name == \"kube-api-access*\"), \
+  .spec.containers[] | .volumeMounts[] | select(.name == \"kube-api-access*\")) \
+  '"
