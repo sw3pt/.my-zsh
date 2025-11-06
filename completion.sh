@@ -88,4 +88,8 @@ fi
 if whence kcm >/dev/null 2>&1; then
   source <(kcm completion zsh)
 fi
+# Setup kcm autocomplete
+if whence virtctl >/dev/null 2>&1; then
+  source <(virtctl completion zsh)
+fi
 
