@@ -25,6 +25,8 @@ setopt pushdignoredups
 setopt pushdminus
 setopt zle
 
+export KCM_ARGOCD_ENABLE="true"
+
 source "$MYZSH"/aliases.sh
 source "$MYZSH"/common.sh
 source "$MYZSH"/completion.sh

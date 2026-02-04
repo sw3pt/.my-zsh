@@ -20,4 +20,8 @@ for file in "$MYZSH"/aliases/*.autodep.sh; do
   if [ -n "$cmd_path" ] && [ -z "${(P)disable_var}" ]; then
     source "$file"
   fi
+
+  if [ -n "$KCM_ARGOCD_ENABLE" ]; then 
+    alias argocd="KUBECONFIG=\$KUBECONFIG_ARGOCD argocd "
+  fi
 done
