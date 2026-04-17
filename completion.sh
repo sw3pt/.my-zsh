@@ -79,12 +79,12 @@ fi
 # Setup Kubectl autocomplete
 if whence kubectl >/dev/null 2>&1; then
   # source <(kubectl completion zsh)
-  source completions/kubectl.sh
+  source "$MYZSH"/completions/kubectl.sh
 fi
 # Setup oc autocomplete
 if whence oc >/dev/null 2>&1; then
   # source <(oc completion zsh)
-  source completions/oc.sh
+  source "$MYZSH"/completions/oc.sh
 fi
 # Setup kcm autocomplete
 if whence kcm >/dev/null 2>&1; then
