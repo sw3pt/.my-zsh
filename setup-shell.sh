@@ -35,3 +35,5 @@ source "$MYZSH"/prompt.sh
 source "$MYZSH"/functions.sh
 source "$MYZSH"/keybinds.sh
 source "$MYZSH"/variables.sh
+
+typeset -aU path
