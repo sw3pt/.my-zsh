@@ -64,8 +64,8 @@ _oc()
 
     # Prepare the command to obtain completions
     requestComp="${words[1]} __complete ${words[2,-2]}"
-    if [ "${firstOfLast}" = "-" ]; then
-        __oc_debug "Adding single dash to keep flag completion working"
+    if [[ "${firstOfLast}" = "-" || "${lastParam}" = *"/"* ]]; then
+        __oc_debug "Revert to default handling when searching for flags or resource/name syntax"
         requestComp="${requestComp} ${lastParam}"
     else
         __oc_debug "Adding empty parameter to get all resources and let zsh decide"
